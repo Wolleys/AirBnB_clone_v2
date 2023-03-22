@@ -1,8 +1,100 @@
-<center> <h1>HBNB - The Console</h1> </center>
+# HBNB
 
 This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
 ---
+
+# Background Context
+Environment variables will be your best friend for this project!
+
+* `HBNB_ENV`: running environment. It can be “dev” or “test” for the moment (“production” soon!)
+* `HBNB_MYSQL_USER`: the username of your MySQL
+* `HBNB_MYSQL_PWD`: the password of your MySQL
+* `HBNB_MYSQL_HOST`: the hostname of your MySQL
+* `HBNB_MYSQL_DB`: the database name of your MySQL
+* `HBNB_TYPE_STORAGE`: the type of storage used. It can be “file” (using `FileStorage`) or `db` (using `DBStorage`)
+
+# Resources
+1. [cmd module](https://docs.python.org/3/library/cmd.html)
+2. [unittest module](https://docs.python.org/3/library/unittest.html#module-unittest)
+3. [args/kwargs](https://yasoob.me/2013/08/04/args-and-kwargs-in-python-explained/)
+4. [SQLAlchemy tutorial](https://docs.sqlalchemy.org/en/13/orm/tutorial.html)
+5. [How To Create a New User and Grant Permissions in MySQL](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
+6. [Python3 and environment variables](https://docs.python.org/3/library/os.html?highlight=env#os.getenv)
+7. [SQLAlchemy](https://docs.sqlalchemy.org/en/13/)
+8. [MySQL 8.0 SQL Statement Syntax](https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html)
+9. [AirBnB clone - ORM](https://www.youtube.com/watch?v=INn8YzN_YJM)
+
+# Learning Objectives
+At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/?fbclid=IwAR2K5_BGPVo0QjJXkOIIqNsqcXK4lTskPWJvA0asKQIGtCPWaQBdKmj1Ztg), **without the help of Google:**
+
+## General
+* What is Unit testing and how to implement it in a large project
+* What is `*args` and how to use it
+* What is `**kwargs` and how to use it
+* How to handle named arguments in a function
+* How to create a MySQL database
+* How to create a MySQL user and grant it privileges
+* What ORM means
+* How to map a Python Class to a MySQL table
+* How to handle 2 different storage engines with the same codebase
+* How to use environment variables
+
+# Requirements
+## Python Scripts
+
+* Allowed editors: `vi`, `vim`, `emacs`
+* All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+* All your files should end with a new line
+* The first line of all your files should be exactly `#!/usr/bin/python3`
+* A `README.md` file, at the root of the folder of the project, is mandatory
+* Your code should use the pycodestyle (version `2.8.*`)
+* All your files must be executable
+* The length of your files will be tested using `wc`
+* All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
+* All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
+* All your functions (inside and outside a class) should have a documentation (`python3 -c 
+'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 
+'print(__import__("my_module").MyClass.my_function.__doc__)'`)
+* A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+## Python Test Cases
+* Allowed editors: `vi`, `vim`, `emacs`
+* All your files should end with a new line
+* All your test files should be inside a folder `tests`
+* You have to use the [unittest module](https://docs.python.org/3.4/library/unittest.html#module-unittest)
+* All your test files should be python files (extension: `.py`)
+* All your test files and folders should start by `test_`
+* Your file organization in the tests folder should be the same as your project
+* e.g., For `models/base_model.py`, unit tests must be in: `tests/test_models/test_base_model.py`
+* e.g., For `models/user.py`, unit tests must be in: `tests/test_models/test_user.py`
+* All your tests should be executed by using this command: `python3 -m unittest discover tests`
+* All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
+* All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
+* All your functions (inside and outside a class) should have a documentation (`python3 -c 
+'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 
+'print(__import__("my_module").MyClass.my_function.__doc__)'`)
+
+## SQL Scripts
+* Allowed editors: `vi`, `vim`, `emacs`
+* All your files will be executed on `Ubuntu 20.04 LTS` using `MySQL 8.0`
+* Your files will be executed with `SQLAlchemy` version `1.4.x`
+* All your files should end with a new line
+* All your SQL queries should have a comment just before (i.e. syntax above)
+* All your files should start by a comment describing the task
+* All SQL keywords should be in uppercase (`SELECT`, `WHERE`…)
+* A `README.md` file, at the root of the folder of the project, is mandatory
+* The length of your files will be tested using `wc`
+
+# More Info
+## Comments for your SQL file:
+```
+$ cat my_script.sql
+-- first 3 students in the Batch ID=3
+-- because Batch 3 is the best!
+SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
+$
+```
 
 <center><h3>Repository Contents by Project Task</h3> </center>
 
